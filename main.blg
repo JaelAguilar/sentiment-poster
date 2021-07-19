@@ -3,44 +3,46 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: plainnat.bst
 Database file #1: poster.bib
+Warning--empty year in chatbot
 You've used 4 entries,
             2773 wiz_defined-function locations,
-            620 strings with 5722 characters,
-and the built_in function-call counts, 2059 in all, are:
-= -- 182
-> -- 129
+            617 strings with 5722 characters,
+and the built_in function-call counts, 1958 in all, are:
+= -- 169
+> -- 118
 < -- 3
-+ -- 43
-- -- 39
-* -- 169
-:= -- 327
-add.period$ -- 18
++ -- 40
+- -- 36
+* -- 153
+:= -- 306
+add.period$ -- 16
 call.type$ -- 4
-change.case$ -- 24
+change.case$ -- 23
 chr.to.int$ -- 4
-cite$ -- 8
-duplicate$ -- 87
+cite$ -- 9
+duplicate$ -- 82
 empty$ -- 158
-format.name$ -- 45
-if$ -- 432
+format.name$ -- 40
+if$ -- 410
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 4
-newline$ -- 32
+missing$ -- 2
+newline$ -- 31
 num.names$ -- 18
-pop$ -- 48
+pop$ -- 56
 preamble$ -- 1
-purify$ -- 20
+purify$ -- 19
 quote$ -- 0
-skip$ -- 71
+skip$ -- 67
 stack$ -- 0
 substring$ -- 53
-swap$ -- 13
+swap$ -- 12
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 39
-warning$ -- 0
+type$ -- 44
+warning$ -- 1
 while$ -- 17
 width$ -- 0
-write$ -- 68
+write$ -- 63
+(There was 1 warning)

@@ -18,17 +18,16 @@ Juan~Carlos {Espinosa Ceniceros}, Satu~Elisa Schaeffer, and Sara~Elena {Garza
 \newblock ISBN 978-1-4799-9900-2.
 \newblock \doi{10.1109/MICAI.2014.13}.
 
+\bibitem[Gómez()]{chatbot}
+Alexander~Espronceda Gómez.
+\newblock Sentiment analysis through a chatbot.
+\newblock A la fecha de redacción de este poster, éste paper sigue en
+  proceso.
+
 \bibitem[{Python Software Foundation}(2021)]{python}
 {Python Software Foundation}.
 \newblock python, 2021.
 \newblock URL \url{https://www.python.org/}.
-
-\bibitem[Russell and Norvig(2020)]{ai}
-Stuart Russell and Peter Norvig.
-\newblock \emph{Artificial Intelligence: A Modern Approach}.
-\newblock Pearson Series in Artifical Intelligence. Pearson, 4 edition, April
-  2020.
-\newblock ISBN 978-0134610993.
 
 \bibitem[Schaeffer et~al.(2021)Schaeffer, Valdés, Figols, Bachmann, Morales,
   and Bustos]{elisa}
