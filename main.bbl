@@ -1,42 +1,42 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[{Espinosa Ceniceros} et~al.(2014){Espinosa Ceniceros}, Schaeffer, and
-  {Garza Villarreal}]{ar}
-Juan~Carlos {Espinosa Ceniceros}, Satu~Elisa Schaeffer, and Sara~Elena {Garza
-  Villarreal}.
-\newblock Augmented reality for green consumption: using computer vision to
-  inform the consumers at time of purchase.
-\newblock In A.~Gelbukh, F.~{Castro Espinoza}, and S.N. Galicia-Haro, editors,
-  \emph{Proc. of 2014 Thirteenth Mexican International Conference on Artificial
-  Intelligence (MICAI 2014) --- Special Session}, pages 45--51. IEEE Computer
-  Society, 2014.
-\newblock ISBN 978-1-4799-9900-2.
-\newblock \doi{10.1109/MICAI.2014.13}.
+\bibitem[{Amol Mavuduru}(2021)]{gpt3}
+{Amol Mavuduru}.
+\newblock What is gpt-3 and why is it so powerful?
+\newblock \emph{Towards Data Science}, 02 2021.
+\newblock URL
+  \url{https://towardsdatascience.com/what-is-gpt-3-and-why-is-it-so-powerful-21ea1ba59811}.
+
+\bibitem[{Google Brain Team}(2019)]{tensorflow}
+{Google Brain Team}.
+\newblock tensorflow, 2019.
+\newblock URL \url{https://www.tensorflow.org/}.
 
 \bibitem[Gómez()]{chatbot}
 Alexander~Espronceda Gómez.
 \newblock Sentiment analysis through a chatbot.
+\newblock URL \url{https://github.com/Alex-Ego/Affective-Computing-VN}.
 \newblock A la fecha de redacción de este poster, éste paper sigue en
   proceso.
+
+\bibitem[{OpenAI}(2020)]{openai}
+{OpenAI}.
+\newblock Openai api, 2020.
+\newblock URL \url{https://openai.com/blog/openai-api/}.
 
 \bibitem[{Python Software Foundation}(2021)]{python}
 {Python Software Foundation}.
 \newblock python, 2021.
 \newblock URL \url{https://www.python.org/}.
 
-\bibitem[Schaeffer et~al.(2021)Schaeffer, Valdés, Figols, Bachmann, Morales,
-  and Bustos]{elisa}
-Satu~Elisa Schaeffer, Valeria Valdés, Javiera Figols, Ivana Bachmann, Fernando
-  Morales, and Javier Bustos.
-\newblock Characterization of robustness and resilience in graphs: A
-  mini-review.
-\newblock \emph{IMA Journal of Complex Networks}, 9\penalty0 (2):\penalty0
-  cnab018, 2021.
-\newblock \doi{10.1093/comnet/cnab018}.
+\bibitem[{Team NLTK}(2021)]{nltk}
+{Team NLTK}.
+\newblock Natural language processor toolkit, 2021.
+\newblock URL \url{https://www.nltk.org/}.
 
 \end{thebibliography}
