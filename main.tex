@@ -7,6 +7,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[sort&compress,numbers]{natbib}
 \usepackage[font=small,labelfont=bf]{caption}
+\usepackage[bottom]{footmisc}
 
 \usepackage{tikz} % diagramas
 \tikzstyle{elem} = [draw, rectangle, thick, minimum height=2em, minimum width=2em]
@@ -39,13 +40,19 @@ En este proyecto intentamos hacer lo posible para incrementar el funcionamiento 
 
 \section{Introducción}
 
-De qué se trata el proyecto. Hipótesis y objetivos. Motivación, justificación.
+El objetivo principal de este proyecto es llevar a cabo diversos procesos que ayuden a que un algoritmo de análisis de sentimientos por medio de texto tenga un porcentaje de acierto más alto. Esto se logrará mediante búsqueda, análisis y filtrado de datos relevantes, así como también la actualización del algoritmo que está siendo utilizado actualmente.
 
 \section{Antecedentes}
 
-Conceptos y notación indispensables para que tus lectores puedan
-entender el resto del trabajo. Citamos al libros de texto como el de
-\citet{ai}.
+El algoritmo de análisis de sentimientos por medio de texto que se utiliza en este proyecto le corresponde a Alexander Espronceda Gómez, quien actualmente está escribiendo un paper al respecto \citep{chatbot}. Por lo tanto, este proyecto sólamente se enfoca en el mejoramiento de éste, y no en el proceso completo.
+\begin{figure}
+	\centering
+	\captionsetup{type=figure}
+	\setcounter{figure}{0}
+	\includegraphics[scale=1.5]{img/Accuracy 2020-05_nofilter}
+	\caption{Gráfica representativa del porcentaje de acierto del algoritmo, antes de aplicársele alguna mejora}
+	
+\end{figure}
 
 \section{Estado de arte}
 
@@ -78,7 +85,7 @@ componentes se interconectan como muestra el diagrama de la figura
 
 \begin{figure}
 \captionsetup{type=figure} % por culpa de sciposter
-\setcounter{figure}{0} % por culpa de sciposter
+\setcounter{figure}{1} % por culpa de sciposter
 \begin{center}
     \begin{tikzpicture}[]
       \matrix[row sep=0.5cm]{
@@ -102,7 +109,7 @@ experimentos. Por lo general se incluyen figuras como la figura
 
 \begin{figure}
 % por culpa de sciposter, hay que ajustar numeracion manualmente  
-\setcounter{figure}{1} 
+\setcounter{figure}{2} 
 \captionsetup{type=figure} % por culpa de sciposter
 \begin{center}
    \end{center}
