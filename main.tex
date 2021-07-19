@@ -57,6 +57,24 @@ El algoritmo de análisis de sentimientos por medio de texto que se utiliza en e
 
 En la actualidad existen muchos algoritmos complejos de análisis de sentimientos que funcionan sin necesidad de introducirle tantos datos, tales como GPT-3 (Generative Pre-trained Transformer 3). En donde gracias a su uso eficiente de transformadores y también gracias a que ha sido entrenado extensamente con datasets enormes (por ejemplo: Wikipedia Corpus, Common Crawl, WebText2, entre otros), no hay necesidad de encontrar datos tan especificos para entrenarlos \citep{gpt3}.
 
+Las opiniones son simples de entender para los humanos, pero, según \citet{liu}, para una computadora es necesario una noción con los siguientes elementos:
+
+\begin{itemize}
+    \item \textit{Objetivo} de la opinion: Entidades y sus características.
+    \item \textit{Sentimientos}: Positivos, negativos o neutrales
+    \item \textit{Poseedor} de la opinión
+    \item \textit{Tiempo} en el que las opiniones son expresadas.
+\end{itemize}
+
+También existen problemas relacionados al procesamiento de lenguaje natural (NLP). \citet{Dale} considera las siguientes las etapas del análisis de NLP:
+\begin{itemize}
+    \item \textit{Tokenización}: Convertir caracteres en palabras, símbolos u otros elementos llamados "tokens".
+    \item \textit{Análisis léxico}: Genera léxico y aplica etiquetas a los tokens.
+    \item \textit{Análisis sintáctico}: Proveer una estructura para cada oración.
+    \item \textit{Análisis semántico}: Encuentra el significado literal.
+    \item \textit{Análisis pragmático}: Determina el significado según el contexto.
+\end{itemize}
+
 La gran diferencia entre el algoritmo propuesto en este proyecto y algo más elaborado como lo es GPT-3, es el hecho de que este último no funciona localmente, sino que en realidad es una API por la cual tienes que pagar para poder usar, además de que OpenAI tiene completo control y regulación de los usos de su algoritmo \citep{openai}. 
 
 Lo que se intenta hacer al momento de utilizar TensorFlow es darle el control completo al usuario en caso de que quiera darle sesgo a los datos o que lo adapte a las necesidades que tenga, sin necesidad de que pase a ser una caja negra. Éste proceso es bastente complicado y probablemente no se alcanzará el grado de porcentaje de acierto con el que cuenta GPT-3, pero se espera que sea lo suficiente como para poder ser una alternativa open-source viable.
