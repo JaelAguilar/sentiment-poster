@@ -77,7 +77,18 @@ de lo que ya existe.  {\textquestiondown}Qué tiene de
 diferente/original/impacto?
 
 \section{Solución propuesta}
-La implementación se hizo en Python 3.7 \citep{python}, además de otras herramientas relacionadas con redes neuronales como Tensorflow 2.0.0 \citep{tensorflow}
+La implementación se hizo en Python 3.7 \citep{python}, además de otras herramientas relacionadas con redes neuronales como Tensorflow 2.0.0 \citep{tensorflow}.
+
+
+
+\subsection{Metodología}
+Se comenzó por una búsqueda de datasets, utilizandose la librería NLTK \citep{nltk} para filtrar palabras que no aportan mucho significado al texto.
+
+Se consideró mejor un enfoque generalista debido a que las diferentes etiquetas de sentimiento a analizar no estaban distribuidas de manera uniforme; por lo que los datos se clasificaron únicamente en \textit{"Bueno"},\textit{"Neutral"} y \textit{"Malo"}.
+
+Se utilizó un algoritmo bidireccional STM con una activación de softmax de última capa. El léxico está limitado a 5000 elementos, y el largo máximo de cualquier frase después de ser filtrada es de 30 caracteres.
+
+Durante la fase de entrenamiento, se utilizaron 25 epochs con un 75\% del dataset en un orden arbitrario, usando el 25\% restante como validación.
 
 
 Metodología, herramientas (qué en sí haces, cómo lo haces, con qué lo
