@@ -1,16 +1,71 @@
-\documentclass[a3]{sciposter}
+\RequirePackage{xcolor}
+\documentclass[a2]{sciposter} % hoja mayor
+\usepackage{graphicx}
+\usepackage{url,doi} % para manejar hipervinculos
+\usepackage{hyperref} % hipervinculos activables en el PDF
+\hypersetup{hidelinks} % que no tengan cajas de color las ligas
 \usepackage[spanish]{babel}   
 \usepackage[utf8]{inputenc}
+\usepackage[sort&compress,numbers]{natbib} % para las citas
 
-\title{Mejora de algoritmo de reconocimiento de emociones}
-\author{Alex..., Cecilia Jael Aguilar Aranda, Elisa Satu Schaeffer}
+\leftlogo[1]{img/UANL.png}
+\rightlogo[1]{img/FIME.png} 
+
+\title{Mejora de algoritmo de\\reconocimiento de emociones}
+\author{Alexander Espronceda Gómez,\\Cecilia Jael Aguilar Aranda$^\dagger$,\\Satu Elisa Schaeffer}
 \institute {Posgrado en Ingeniería de Sistemas}
-\email{cjaelaguilar@gmail.com}
+\email{$^\dagger$cjaelaguilar@gmail.com}
+
+
 
 \begin{document}
 
 \conference{Verano Científico FIME UANL 2021}
 
 \maketitle
+
+\section{Introducción}
+
+De qué se trata el proyecto. Hipótesis y objetivos. Motivación,
+justificación.
+
+\section{Antecedentes}
+
+Conceptos y notación indispensables para que tus lectores puedan
+entender el resto del trabajo.
+
+\section{Estado de arte}
+
+Qué han hecho los demás sobre este tema (citar a publicaciones
+científicas, de preferencia publicadas en revistas que tengan un DOI y
+que por lo menos algunos sean de los últimos cinco años). Si son
+libros, que tengan un ISBN. Evitar citar puros sitios web.
+
+Área de oportunidad: qué exactamente este trabajo contribuirá encima
+de lo que ya existe. {\textquestiondown}Qué tiene de
+diferente/original/impacto?
+
+\section{Solución propuesta}
+
+Metodología, herramientas (qué en sí haces, cómo lo haces, con qué lo
+haces).
+
+\section{Experimentos}
+
+Diseño, reportaje y análisis de los resultados de los experimentos.
+
+\section{Conclusiones}
+
+Qué se logró hacer; qué posibilidad de trabajo a futuro se tiene para
+este trabajo.
+
+\subsection*{Agradecimientos}
+
+Organismos que otorgaron beca. Las demás personas que no son autores
+que ayudaron en algo. El póster se preparó con
+\url{https://www.overleaf.com/}.
+
+\bibliography{poster} % de donde viene los datos de las refs
+\bibliographystyle{plainnat} % en cual estilo se acomodan
 
 \end{document}
