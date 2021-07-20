@@ -21,8 +21,8 @@
 
 \title{Mejora de algoritmo de\\reconocimiento de emociones}
 \author{Cecilia Jael Aguilar Aranda$^\dagger$,\\Alexander Espronceda Gómez$^\ddagger$\\Satu Elisa Schaeffer}
-\institute {Posgrado en Ingeniería de Sistemas}
-\email{$^\dagger$cjaelaguilar@gmail.com, $^\ddagger$alexeg98@gmail.com}
+\institute {$^\dagger$Ingeniería en Administración de Sistemas,  $^\ddagger$Ingeniería en Tecnologías de Software, Posgrado en Ingeniería de Sistemas}
+\email{$^\dagger$cecilia.aguilarand@uanl.edu.mx, $^\ddagger$alexeg98@gmail.com}
 
 
 \begin{document}
@@ -38,6 +38,7 @@ En este proyecto se busca incrementar el funcionamiento de un algoritmo de anál
 \begin{multicols}{2} 
 
 \section{Introducción}
+El análisis de sentimiento se refiere a la aplicación de procesamiento de lenguaje natural, linguística computacional y análisis de texto para identificar la emoción del autor. \citep{definition}. En el presente documento se considera "Análisis de sentimiento" y "Reconocimiento de emociones" como un mismo concepto.
 
 El objetivo principal de este proyecto es llevar a cabo diversos procesos que ayuden a que un algoritmo de análisis de sentimientos por medio de texto tenga un porcentaje de acierto más alto. Esto se logrará mediante búsqueda, análisis y filtrado de datos relevantes, así como también la actualización del algoritmo que está siendo utilizado actualmente.
 
@@ -59,36 +60,38 @@ En la actualidad existen muchos algoritmos complejos de análisis de sentimiento
 
 Las opiniones son simples de entender para los humanos, pero, según \citet{liu}, para una computadora es necesario una noción con los siguientes elementos:
 
-\begin{itemize}
-    \item \textit{Objetivo} de la opinion: Entidades y sus características.
-    \item \textit{Sentimientos}: Positivos, negativos o neutrales
-    \item \textit{Poseedor} de la opinión
-    \item \textit{Tiempo} en el que las opiniones son expresadas.
-\end{itemize}
+%\begin{itemize}
+%    \item \textit{Objetivo} de la opinion: Entidades y sus características.
+%    \item \textit{Sentimientos}: Positivos, negativos o neutrales
+%    \item \textit{Poseedor} de la opinión
+%    \item \textit{Tiempo} en el que las opiniones son expresadas.
+%\end{itemize}
 
-También existen problemas relacionados al procesamiento de lenguaje natural (NLP). \citet{Dale} considera las siguientes las etapas del análisis de NLP:
-\begin{itemize}
-    \item \textit{Tokenización}: Convertir caracteres en palabras, símbolos u otros elementos llamados "tokens".
-    \item \textit{Análisis léxico}: Genera léxico y aplica etiquetas a los tokens.
-    \item \textit{Análisis sintáctico}: Proveer una estructura para cada oración.
-    \item \textit{Análisis semántico}: Encuentra el significado literal.
-    \item \textit{Análisis pragmático}: Determina el significado según el contexto.
-\end{itemize}
+%También existen problemas relacionados al procesamiento de lenguaje natural (NLP). \citet{Dale} considera las siguientes las etapas del análisis de NLP:
+%\begin{itemize}
+%    \item \textit{Tokenización}: Convertir caracteres en palabras, símbolos u otros elementos llamados "tokens".
+%    \item \textit{Análisis léxico}: Genera léxico y aplica etiquetas a los tokens.
+%    \item \textit{Análisis sintáctico}: Proveer una estructura para cada oración.
+%    \item \textit{Análisis semántico}: Encuentra el significado literal.
+%    \item \textit{Análisis pragmático}: Determina el significado según el contexto.
+%\end{itemize}
 
 La gran diferencia entre el algoritmo propuesto en este proyecto y algo más elaborado como lo es GPT-3, es el hecho de que este último no funciona localmente, sino que en realidad es una API por la cual tienes que pagar para poder usar, además de que OpenAI tiene completo control y regulación de los usos de su algoritmo \citep{openai}. 
 
 Lo que se intenta hacer al momento de utilizar TensorFlow es darle el control completo al usuario en caso de que quiera darle sesgo a los datos o que lo adapte a las necesidades que tenga, sin necesidad de que pase a ser una caja negra. Éste proceso es bastente complicado y probablemente no se alcanzará el grado de porcentaje de acierto con el que cuenta GPT-3, pero se espera que sea lo suficiente como para poder ser una alternativa open-source viable.
 
+
+
 \section{Solución propuesta}
 La implementación se hizo en Python 3.7 \citep{python}, además de otras herramientas relacionadas con redes neuronales como Tensorflow 2.0.0 \citep{tensorflow}.
 
 
-\subsection{Metodología}
-Se comenzó por una búsqueda de datasets, utilizandose la librería NLTK \citep{nltk} para filtrar palabras que no aportan mucho significado al texto.
+\paragraph{Metodología}
+Se comienza por una búsqueda de datasets, utilizándose la librería NLTK \citep{nltk} para filtrar palabras que no aportan mucho significado al texto.
 
-Se consideró mejor un enfoque generalista debido a que las diferentes etiquetas de sentimiento a analizar no estaban distribuidas de manera uniforme; por lo que los datos se clasificaron únicamente en \textit{"Bueno"},\textit{"Neutral"} y \textit{"Malo"}.
+Se considera mejor un enfoque generalista debido a que las diferentes etiquetas de sentimiento a analizar no estaban distribuidas de manera uniforme; por lo que los datos se clasifican únicamente en \textit{"Bueno"},\textit{"Neutral"} y \textit{"Malo"}.
 
-Se utilizó un algoritmo bidireccional STM con una activación de softmax de última capa. El léxico está limitado a 5000 elementos, y el largo máximo de cualquier frase después de ser filtrada es de 30 caracteres.
+Se utiliza un algoritmo bidireccional STM con una activación de softmax de última capa. El léxico está limitado a 5000 elementos, y el largo máximo de cualquier frase después de ser filtrada es de 30 caracteres.
 
 Ya después de ser actualizado, el dataset utilizado cuenta con alrededor de 60,000 tweets filtrados y clasificados.
 
@@ -120,7 +123,7 @@ Se ha logrado un aumento en la precisión de reconocimiento de emociones, se esp
 
 \paragraph{Agradecimientos}
 
-{\small Agradecemos a la dra. Elisa Schaeffer por su apoyo en la realización del póster, además de el PROVERICYT y Delfín al dar la oportunidad de participar en el Verano de Investigación Científica y Tecnológica 2021 y proporcionar una beca.
+{\small Agradecemos a la dra. Elisa Schaeffer por su apoyo en la realización del póster, además de el PROVERICYT al dar la oportunidad de participar en el Verano de Investigación Científica y Tecnológica 2021 y proporcionar una beca.
 El póster se preparó con \url{https://www.overleaf.com/}.}
 
 
