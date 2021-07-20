@@ -26,37 +26,44 @@
 
 
 \begin{document}
+\conference{\raisebox{0mm}[0cm]{\includegraphics[width=50mm]{img/qr-code-Poster.png}}
+  \raisebox{0mm}[0cm]{\includegraphics[width=50mm]{img/qr-code-Project.png}}
+  \hfill
+  \raisebox{20mm}[0cm]{\large Verano Científico 2021 --- Facultad de Ingeniería Mecánica y Eléctrica --- Universidad Autónoma de Nuevo León}
+  \hfill
+  \raisebox{0mm}[0cm]{\includegraphics[width=100mm]{img/Paicyt-logo.png}}
+  }
 
-\conference{Verano Científico FIME UANL 2021}
+%\conference{\raisebox{8mm}{\large Verano Científico 2021 --- Facultad de Ingeniería Mecánica y Eléctrica --- Universidad Autónoma de Nuevo León}}
 
 \maketitle
 
 \begin{abstract}
-En este proyecto se busca incrementar el funcionamiento de un algoritmo de análisis de sentimientos en base a texto utilizando redes neuronales. Esto conlleva realizar modificaciones al código, aí como el aumento del dataset con el que se trabaja. El objetivo es realizar un chatbot capaz de reconocer patrones, determinar el sentimeinto mostrado por el usuario y actuar acorde a ello.
+En este proyecto se busca incrementar el funcionamiento de un algoritmo de análisis de sentimiento en base a texto utilizando redes neuronales. Esto conlleva realizar modificaciones al código, aí como el aumento del dataset con el que se trabaja. El objetivo es realizar un chatbot capaz de reconocer patrones, determinar el sentimeinto mostrado por el usuario y actuar acorde a ello.
 \end{abstract}
 
 \begin{multicols}{2} 
 
 \section{Introducción}
-El análisis de sentimiento se refiere a la aplicación de procesamiento de lenguaje natural, linguística computacional y análisis de texto para identificar la emoción del autor. \citep{definition}. En el presente documento se considera "Análisis de sentimiento" y "Reconocimiento de emociones" como un mismo concepto.
+El análisis de sentimiento se refiere a la aplicación de procesamiento de lenguaje natural, linguística computacional y análisis de texto para identificar la emoción del autor. \citep{definition}. En el presente documento se considera \textit{Análisis de sentimiento} y \textit{Reconocimiento de emociones} como un mismo concepto.
 
-El objetivo principal de este proyecto es llevar a cabo diversos procesos que ayuden a que un algoritmo de análisis de sentimientos por medio de texto tenga un porcentaje de acierto más alto. Esto se logrará mediante búsqueda, análisis y filtrado de datos relevantes, así como también la actualización del algoritmo que está siendo utilizado actualmente.
+El objetivo principal de este proyecto es llevar a cabo diversos procesos que ayuden a que un algoritmo de análisis de sentimiento por medio de texto tenga un porcentaje de acierto más alto. Esto se logrará mediante búsqueda, análisis y filtrado de datos relevantes, así como también la actualización del algoritmo que está siendo utilizado actualmente.
 
 \section{Antecedentes}
 
-El algoritmo de análisis de sentimientos por medio de texto que se utiliza en este proyecto le corresponde a Alexander Espronceda Gómez, quien actualmente está escribiendo un paper al respecto \citep{chatbot}. Por lo tanto, este proyecto sólamente se enfoca en el mejoramiento de éste, y no en el proceso completo.
+El algoritmo de análisis de sentimiento por medio de texto que se utiliza en este proyecto le corresponde a Alexander Espronceda Gómez, quien actualmente está escribiendo un paper al respecto \citep{chatbot}. Por lo tanto, este proyecto sólamente se enfoca en el mejoramiento de éste, y no en el proceso completo.
 \begin{figure}
 	\centering
 	\captionsetup{type=figure}
 	\setcounter{figure}{0}
-	\includegraphics[scale=1.5]{img/Accuracy 2020-05_nofilter}
+	\includegraphics[scale=1.3]{img/Accuracy 2020-05_nofilter}
 	\caption{Gráfica representativa del porcentaje de acierto del algoritmo, antes de aplicársele alguna mejora}
 	
 \end{figure}
 
 \section{Estado de arte}
 
-En la actualidad existen muchos algoritmos complejos de análisis de sentimientos que funcionan sin necesidad de introducirle tantos datos, tales como GPT-3 (Generative Pre-trained Transformer 3). En donde gracias a su uso eficiente de transformadores y también gracias a que ha sido entrenado extensamente con datasets enormes (por ejemplo: Wikipedia Corpus, Common Crawl, WebText2, entre otros), no hay necesidad de encontrar datos tan especificos para entrenarlos \citep{gpt3}.
+En la actualidad existen muchos algoritmos complejos de análisis de sentimiento que funcionan sin necesidad de introducirle tantos datos, tales como GPT-3 (Generative Pre-trained Transformer 3). En donde gracias a su uso eficiente de transformadores y también gracias a que ha sido entrenado extensamente con datasets enormes (por ejemplo: Wikipedia Corpus, Common Crawl, WebText2, entre otros), no hay necesidad de encontrar datos tan especificos para entrenarlos \citep{gpt3}.
 
 Las opiniones son simples de entender para los humanos, pero, según \citet{liu}, para una computadora es necesario una noción con los siguientes elementos:
 
@@ -101,7 +108,7 @@ Durante la fase de entrenamiento, se utilizaron 25 epochs con un 75\% del datase
 	\centering
 	\captionsetup{type=figure}
 	\setcounter{figure}{1}
-	\includegraphics[scale=1.5]{img/Accuracy 2021-07.png}
+	\includegraphics[scale=1.3]{img/Accuracy 2021-07.png}
 	\caption{Gráfica representativa del porcentaje de acierto del algoritmo, después de aplicársele las mejoras propuestas}	
 \end{figure}
 
