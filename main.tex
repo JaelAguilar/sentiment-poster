@@ -21,17 +21,17 @@
 
 \title{Mejora de algoritmo de\\reconocimiento de emociones}
 \author{Cecilia Jael Aguilar Aranda$^\dagger$,\\Alexander Espronceda Gómez$^\ddagger$\\Satu Elisa Schaeffer$^\ast$}
-\institute {$^\dagger$Ingeniería en Administración de Sistemas,  $^\ddagger$Ingeniería en Tecnologías de Software, \\Posgrado en Ingeniería de Sistemas$^\ast$}
-\email{$^\dagger$cecilia.aguilarand@uanl.edu.mx, $^\ddagger$alexander.esproncedago@uanl.edu.mx}
+\institute {$^\dagger$Ingeniería en Administración de Sistemas,  $^\ddagger$Ingeniería en Tecnologías de Software, \\$^\ast$Posgrado en Ingeniería de Sistemas}
+\email{$^\dagger$cecilia.aguilarand@uanl.edu.mx, $^\ddagger$alexander.esproncedago@uanl.edu.mx, $^\ast$elisa.schaeffer(AT)uanl.edu.mx}
 
 
 \begin{document}
 \conference{\raisebox{0mm}[0cm]{\includegraphics[width=50mm]{img/qr-code-Poster.png}}
   \raisebox{0mm}[0cm]{\includegraphics[width=50mm]{img/qr-code-Project.png}}
   \hfill
-  \raisebox{20mm}[0cm]{\large Verano Científico 2021 --- Facultad de Ingeniería Mecánica y Eléctrica --- Universidad Autónoma de Nuevo León}
-  \hfill
   \raisebox{10mm}[0cm]{\includegraphics[width=100mm]{img/Provericyt-2021.png}}
+  \hfill
+  \raisebox{10mm}[0cm]{\includegraphics[width=100mm]{img/Verano-Logo.png}}
   }
 
 %\conference{\raisebox{8mm}{\large Verano Científico 2021 --- Facultad de Ingeniería Mecánica y Eléctrica --- Universidad Autónoma de Nuevo León}}
@@ -39,7 +39,7 @@
 \maketitle
 
 \begin{abstract}
-En este proyecto se busca incrementar el funcionamiento de un algoritmo de análisis de sentimiento en base a texto utilizando redes neuronales. Esto conlleva realizar modificaciones al código, aí como el aumento del dataset con el que se trabaja. El objetivo es realizar un chatbot capaz de reconocer patrones, determinar el sentimeinto mostrado por el usuario y actuar acorde a ello.
+En este proyecto se busca incrementar el funcionamiento de un algoritmo de análisis de sentimiento en base a texto utilizando redes neuronales. Esto conlleva realizar modificaciones al código, así como el aumento del conjunto de datos con el que se trabaja. El objetivo es realizar un software conversacional capaz de reconocer patrones, determinar el sentimiento mostrado por el usuario y actuar acorde a ello.
 \end{abstract}
 
 \begin{multicols}{3} 
@@ -51,7 +51,7 @@ El objetivo principal de este proyecto es llevar a cabo diversos procesos que ay
 
 \section{Antecedentes}
 
-El algoritmo de análisis de sentimiento por medio de texto que se utiliza en este proyecto le corresponde a Alexander Espronceda Gómez, quien actualmente está escribiendo una tesis al respecto \citep{chatbot}. Por lo tanto, este proyecto sólamente se enfoca en el mejoramiento de éste, y no en el proceso completo.
+El algoritmo de análisis de sentimiento por medio de texto que se utiliza en este proyecto le corresponde a Alexander Espronceda Gómez, quien actualmente está escribiendo una tesis al respecto \citep{software conversacional}. Por lo tanto, este proyecto sólamente se enfoca en el mejoramiento de éste, y no en el proceso completo.
 \begin{figure}
 	\centering
 	\captionsetup{type=figure}
@@ -63,9 +63,9 @@ El algoritmo de análisis de sentimiento por medio de texto que se utiliza en es
 
 \section{Estado de arte}
 
-En la actualidad existen muchos algoritmos complejos de análisis de sentimiento que funcionan sin necesidad de introducirle tantos datos, tales como GPT-3 (Generative Pre-trained Transformer 3). En donde gracias a su uso eficiente de transformadores y también gracias a que ha sido entrenado extensamente con datasets enormes (por ejemplo: Wikipedia Corpus, Common Crawl, WebText2, entre otros), no hay necesidad de encontrar datos tan especificos para entrenarlos \citep{gpt3}.
+En la actualidad existen muchos algoritmos complejos de análisis de sentimiento que funcionan sin necesidad de introducirle tantos datos, tales como GPT-3 (Generative Pre-trained Transformer 3). En donde gracias a su uso eficiente de transformadores y también gracias a que ha sido entrenado extensamente con conjuntos de datos enormes (por ejemplo: Wikipedia Corpus, Common Crawl, WebText2, entre otros), no hay necesidad de encontrar datos tan especificos para entrenarlos \citep{gpt3}.
 
-Las opiniones son simples de entender para los humanos, pero, según \citet{liu}, para una computadora es necesario una noción con los siguientes elementos:
+%Las opiniones son simples de entender para los humanos, pero, según \citet{liu}, para una computadora es necesario una noción con los siguientes elementos:
 
 %\begin{itemize}
 %    \item \textit{Objetivo} de la opinion: Entidades y sus características.
@@ -94,15 +94,15 @@ La implementación se hizo en Python 3.7 \citep{python}, además de otras herram
 
 
 \paragraph{Metodología}
-Se comienza por una búsqueda de datasets, utilizándose la librería NLTK \citep{nltk} para filtrar palabras que no aportan mucho significado al texto.
+Se comienza por una búsqueda de conjuntos de datos, utilizándose la librería NLTK \citep{nltk} para filtrar palabras que no aportan mucho significado al texto.
 
 Se considera mejor un enfoque generalista debido a que las diferentes etiquetas de sentimiento a analizar no estaban distribuidas de manera uniforme; por lo que los datos se clasifican únicamente en \textit{"Bueno"},\textit{"Neutral"} y \textit{"Malo"}.
 
 Se utiliza un algoritmo bidireccional STM con una activación de softmax de última capa. El léxico está limitado a 5000 elementos, y el largo máximo de cualquier frase después de ser filtrada es de 30 caracteres.
 
-Ya después de ser actualizado, el dataset utilizado cuenta con alrededor de 60,000 tweets filtrados y clasificados.
+Ya después de ser actualizado, el conjunto de datos utilizado cuenta con alrededor de 60,000 tweets filtrados y clasificados.
 
-Durante la fase de entrenamiento, se utilizaron 25 epochs con un 75\% del dataset en un orden arbitrario, usando el 25\% restante como validación.
+Durante la fase de entrenamiento, se utilizaron 25 epochs con un 75\% del conjunto de datos en un orden arbitrario, usando el 25\% restante como validación.
 
 \begin{figure}
 	\centering
@@ -114,15 +114,27 @@ Durante la fase de entrenamiento, se utilizaron 25 epochs con un 75\% del datase
 
 \section{Experimentos}
 
-Para determinar que este enfoque iba a funcionar, lo que hicimos fue correr varias veces el algoritmo con diferentes parámetros dentro de él, identificando áreas de oportunidad en donde podrían ir mejoras, y finalmente comparando reultados.
+Para determinar que este enfoque iba a funcionar, lo que hicimos fue correr varias veces el algoritmo con diferentes parámetros dentro de él, identificando áreas de oportunidad en donde podrían ir mejoras, y finalmente comparando resultados.
 
-\begin{figure}
-	\captionsetup{type=figure}
-	\setcounter{figure}{2}
-	\includegraphics[scale=0.6]{img/Test 2021-05.png}
-	\includegraphics[scale=0.6]{img/Test 2021-07.png}
-	\caption{Parámetros antes y después de la mejora}
+
+
+\begin{figure}[!tbp]
+\captionsetup{type=figure}
+
+  \centering
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=1.05\textwidth]{img/Loss Before.png}
+    \caption{Pérdida antes de la mejora}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=1.05\textwidth]{img/Loss After.png}
+    \caption{Pérdida después de la mejora}
+  \end{minipage}
+  
 \end{figure}
+
+
 
 \begin{table}
 \setcounter{table}{0} % por culpa de sciposter
