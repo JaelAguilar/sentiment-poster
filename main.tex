@@ -16,8 +16,8 @@
 \setlength{\parskip}{3pt} % espacio entre parrafos
 \renewcommand{\arraystretch}{1.5} % altura de renglones de cuadros
 
-\leftlogo[1]{img/UANL.png}
-\rightlogo[1]{img/FIME.png} 
+\leftlogo[1.2]{img/UANL.png}
+\rightlogo[1.2]{img/FIME.png} 
 
 \title{Mejora de algoritmo de\\reconocimiento de emociones}
 \author{Cecilia Jael Aguilar Aranda$^\dagger$,\\Alexander Espronceda Gómez$^\ddagger$\\Satu Elisa Schaeffer$^\ast$}
@@ -26,12 +26,12 @@
 
 
 \begin{document}
-\conference{\raisebox{0mm}[0cm]{\includegraphics[width=50mm]{img/qr-code-Poster.png}}
-  \raisebox{0mm}[0cm]{\includegraphics[width=50mm]{img/qr-code-Project.png}}
+\conference{\raisebox{0mm}[0cm]{\includegraphics[width=80mm]{img/qr-code-Poster.png}}
+  \raisebox{0mm}[0cm]{\includegraphics[width=80mm]{img/qr-code-Project.png}}
   \hfill
-  \raisebox{10mm}[0cm]{\includegraphics[width=100mm]{img/Provericyt-2021.png}}
+  \raisebox{10mm}[0cm]{\includegraphics[width=200mm]{img/Provericyt-2021.png}}
   \hfill
-  \raisebox{10mm}[0cm]{\includegraphics[width=100mm]{img/Verano-Logo.png}}
+  \raisebox{10mm}[0cm]{\includegraphics[width=200mm]{img/Verano-Logo.png}}
   }
 
 %\conference{\raisebox{8mm}{\large Verano Científico 2021 --- Facultad de Ingeniería Mecánica y Eléctrica --- Universidad Autónoma de Nuevo León}}
@@ -50,8 +50,8 @@ El análisis de sentimiento se refiere a la aplicación de procesamiento de leng
 El objetivo principal de este proyecto es llevar a cabo diversos procesos que ayuden a que un algoritmo de análisis de sentimiento por medio de texto tenga un porcentaje de acierto más alto. Esto se logrará mediante búsqueda, análisis y filtrado de datos relevantes, así como también la actualización del algoritmo que está siendo utilizado actualmente.
 
 \section{Antecedentes}
+Este proyecto es parte del trabajo de tesis de \citet{chatbot}; se busca mejorar los resultados anteriormente obtenidos con la introducción de datos adicionales para el entrenamiento.
 
-El algoritmo de análisis de sentimiento por medio de texto que se utiliza en este proyecto le corresponde a Alexander Espronceda Gómez, quien actualmente está escribiendo una tesis al respecto \citep{software conversacional}. Por lo tanto, este proyecto sólamente se enfoca en el mejoramiento de éste, y no en el proceso completo.
 \begin{figure}
 	\centering
 	\captionsetup{type=figure}
@@ -63,40 +63,22 @@ El algoritmo de análisis de sentimiento por medio de texto que se utiliza en es
 
 \section{Estado de arte}
 
-En la actualidad existen muchos algoritmos complejos de análisis de sentimiento que funcionan sin necesidad de introducirle tantos datos, tales como GPT-3 (Generative Pre-trained Transformer 3). En donde gracias a su uso eficiente de transformadores y también gracias a que ha sido entrenado extensamente con conjuntos de datos enormes (por ejemplo: Wikipedia Corpus, Common Crawl, WebText2, entre otros), no hay necesidad de encontrar datos tan especificos para entrenarlos \citep{gpt3}.
+En la actualidad existen muchos algoritmos complejos de análisis de sentimiento que funcionan sin necesidad de introducir una cantidad excesiva de datos, tales como GPT-3 (Generative Pre-trained Transformer 3). En donde gracias a su uso eficiente de transformadores y también a que ha sido entrenado extensamente con conjuntos de datos enormes (por ejemplo: Wikipedia Corpus, Common Crawl, WebText2, entre otros), no hay necesidad de encontrar datos tan especificos para entrenarlos \citep{gpt3}.
 
-%Las opiniones son simples de entender para los humanos, pero, según \citet{liu}, para una computadora es necesario una noción con los siguientes elementos:
+La gran diferencia entre el algoritmo propuesto en este proyecto y algo más elaborado como lo es GPT-3, es el hecho de que este último no funciona localmente, sino que en realidad es una API por la cual se tiene que pagar para poder usar, además de que OpenAI posee completo control y regulación de los usos de su algoritmo \citep{openai}. 
 
-%\begin{itemize}
-%    \item \textit{Objetivo} de la opinion: Entidades y sus características.
-%    \item \textit{Sentimientos}: Positivos, negativos o neutrales
-%    \item \textit{Poseedor} de la opinión
-%    \item \textit{Tiempo} en el que las opiniones son expresadas.
-%\end{itemize}
-
-%También existen problemas relacionados al procesamiento de lenguaje natural (NLP). \citet{Dale} considera las siguientes las etapas del análisis de NLP:
-%\begin{itemize}
-%    \item \textit{Tokenización}: Convertir caracteres en palabras, símbolos u otros elementos llamados "tokens".
-%    \item \textit{Análisis léxico}: Genera léxico y aplica etiquetas a los tokens.
-%    \item \textit{Análisis sintáctico}: Proveer una estructura para cada oración.
-%    \item \textit{Análisis semántico}: Encuentra el significado literal.
-%    \item \textit{Análisis pragmático}: Determina el significado según el contexto.
-%\end{itemize}
-
-La gran diferencia entre el algoritmo propuesto en este proyecto y algo más elaborado como lo es GPT-3, es el hecho de que este último no funciona localmente, sino que en realidad es una API por la cual tienes que pagar para poder usar, además de que OpenAI tiene completo control y regulación de los usos de su algoritmo \citep{openai}. 
-
-Lo que se intenta hacer al momento de utilizar TensorFlow es darle el control completo al usuario en caso de que quiera darle sesgo a los datos o que lo adapte a las necesidades que tenga, sin necesidad de que pase a ser una caja negra. Éste proceso es bastente complicado y probablemente no se alcanzará el grado de porcentaje de acierto con el que cuenta GPT-3, pero se espera que sea lo suficiente como para poder ser una alternativa open-source viable.
+Lo que se intenta hacer al momento de utilizar TensorFlow es darle el control completo al usuario en caso de que quiera darle sesgo a los datos o que lo adapte a las necesidades que tenga, sin necesidad de que pase a ser una caja negra. Este proceso es bastente complicado es posible que no se alcance el grado de porcentaje de acierto con el que cuenta GPT-3, pero se espera que sea lo suficiente como para poder ser una alternativa open-source viable.
 
 
 
 \section{Solución propuesta}
-La implementación se hizo en Python 3.7 \citep{python}, además de otras herramientas relacionadas con redes neuronales como Tensorflow 2.0.0 \citep{tensorflow}.
+La implementación se hizo en Python 3.7 \citep{python}, además de otras herramientas relacionadas con redes neuronales como Tensorflow 2.0.0 \citep{tensorflow} y procesamiento de lenguaje natural como NLTK \citep{nltk}
 
 
 \paragraph{Metodología}
-Se comienza por una búsqueda de conjuntos de datos, utilizándose la librería NLTK \citep{nltk} para filtrar palabras que no aportan mucho significado al texto.
+Se comienza por una búsqueda de conjuntos de datos para después filtrar las palabras que no aportan mucho significado al texto.
 
-Se considera mejor un enfoque generalista debido a que las diferentes etiquetas de sentimiento a analizar no estaban distribuidas de manera uniforme; por lo que los datos se clasifican únicamente en \textit{"Bueno"},\textit{"Neutral"} y \textit{"Malo"}.
+Se considera mejor un enfoque generalista debido a que las diferentes etiquetas de sentimiento a analizar no se encuentran distribuidas de manera uniforme; por lo que los datos se clasifican únicamente en \textit{"Bueno"},\textit{"Neutral"} y \textit{"Malo"}.
 
 Se utiliza un algoritmo bidireccional STM con una activación de softmax de última capa. El léxico está limitado a 5000 elementos, y el largo máximo de cualquier frase después de ser filtrada es de 30 caracteres.
 
@@ -113,25 +95,25 @@ Durante la fase de entrenamiento, se utilizaron 25 epochs con un 75\% del conjun
 \end{figure}
 
 \section{Experimentos}
-
-Para determinar que este enfoque iba a funcionar, lo que hicimos fue correr varias veces el algoritmo con diferentes parámetros dentro de él, identificando áreas de oportunidad en donde podrían ir mejoras, y finalmente comparando resultados.
+Para examinar el impacto del enfoque propuesto, se realizaron múltiples ejecuciones del algoritmo con diferentes parámetros dentro de él, identificando áreas de oportunidad en donde podrían ir mejoras, y finalmente comparando resultados.
 
 
 
 \begin{figure}[!tbp]
 \captionsetup{type=figure}
 
+
   \centering
   \begin{minipage}[b]{0.45\textwidth}
     \includegraphics[width=1.05\textwidth]{img/Loss Before.png}
-    \caption{Pérdida antes de la mejora}
+    \captionof*{figure}{a) Antes}
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.45\textwidth}
     \includegraphics[width=1.05\textwidth]{img/Loss After.png}
-    \caption{Pérdida después de la mejora}
+    \captionof*{figure}{b) Después}
   \end{minipage}
-  
+  \caption{Pérdida antes y después de aplicarse la mejora}
 \end{figure}
 
 
@@ -139,14 +121,14 @@ Para determinar que este enfoque iba a funcionar, lo que hicimos fue correr vari
 \begin{table}
 \setcounter{table}{0} % por culpa de sciposter
 \captionsetup{type=table} % por culpa de sciposter
-\caption{Resultados de los experimentos antes y después de aplicarse la mejora}
+\caption{Resultados de la precisión en los experimentos antes y después de aplicarse la mejora}
 \label{data}
 \begin{center}
 \scalebox{0.9}{\begin{tabular}{|r|c|l|}
     \hline
          \multicolumn{1}{|c|}{}
-         & \multicolumn{1}{|c|}{\rotatebox{90}{\bf Precisión de entrenamiento }}
-         & \multicolumn{1}{|c|}{\rotatebox{90}{\bf Precisión de testeo\phantom{m}}} \\
+         & \multicolumn{1}{|c|}{\rotatebox{90}{\bf Entrenamiento }}
+         & \multicolumn{1}{|c|}{\rotatebox{90}{\bf Testeo\phantom{m}}} \\
          \hline
          \bf{Antes} & 80.64\% & 55.92\% \\
          \hline
