@@ -20,9 +20,9 @@
 \rightlogo[1]{img/FIME.png} 
 
 \title{Mejora de algoritmo de\\reconocimiento de emociones}
-\author{Cecilia Jael Aguilar Aranda$^\dagger$,\\Alexander Espronceda Gómez$^\ddagger$\\Satu Elisa Schaeffer}
-\institute {$^\dagger$Ingeniería en Administración de Sistemas,  $^\ddagger$Ingeniería en Tecnologías de Software, Posgrado en Ingeniería de Sistemas}
-\email{$^\dagger$cecilia.aguilarand@uanl.edu.mx, $^\ddagger$alexeg98@gmail.com}
+\author{Cecilia Jael Aguilar Aranda$^\dagger$,\\Alexander Espronceda Gómez$^\ddagger$\\Satu Elisa Schaeffer$^\ast$}
+\institute {$^\dagger$Ingeniería en Administración de Sistemas,  $^\ddagger$Ingeniería en Tecnologías de Software, \\Posgrado en Ingeniería de Sistemas$^\ast$}
+\email{$^\dagger$cecilia.aguilarand@uanl.edu.mx, $^\ddagger$alexander.esproncedago@uanl.edu.mx}
 
 
 \begin{document}
@@ -31,7 +31,7 @@
   \hfill
   \raisebox{20mm}[0cm]{\large Verano Científico 2021 --- Facultad de Ingeniería Mecánica y Eléctrica --- Universidad Autónoma de Nuevo León}
   \hfill
-  \raisebox{0mm}[0cm]{\includegraphics[width=100mm]{img/Paicyt-logo.png}}
+  \raisebox{10mm}[0cm]{\includegraphics[width=100mm]{img/Provericyt-2021.png}}
   }
 
 %\conference{\raisebox{8mm}{\large Verano Científico 2021 --- Facultad de Ingeniería Mecánica y Eléctrica --- Universidad Autónoma de Nuevo León}}
@@ -42,7 +42,7 @@
 En este proyecto se busca incrementar el funcionamiento de un algoritmo de análisis de sentimiento en base a texto utilizando redes neuronales. Esto conlleva realizar modificaciones al código, aí como el aumento del dataset con el que se trabaja. El objetivo es realizar un chatbot capaz de reconocer patrones, determinar el sentimeinto mostrado por el usuario y actuar acorde a ello.
 \end{abstract}
 
-\begin{multicols}{2} 
+\begin{multicols}{3} 
 
 \section{Introducción}
 El análisis de sentimiento se refiere a la aplicación de procesamiento de lenguaje natural, linguística computacional y análisis de texto para identificar la emoción del autor. \citep{definition}. En el presente documento se considera \textit{Análisis de sentimiento} y \textit{Reconocimiento de emociones} como un mismo concepto.
@@ -51,7 +51,7 @@ El objetivo principal de este proyecto es llevar a cabo diversos procesos que ay
 
 \section{Antecedentes}
 
-El algoritmo de análisis de sentimiento por medio de texto que se utiliza en este proyecto le corresponde a Alexander Espronceda Gómez, quien actualmente está escribiendo un paper al respecto \citep{chatbot}. Por lo tanto, este proyecto sólamente se enfoca en el mejoramiento de éste, y no en el proceso completo.
+El algoritmo de análisis de sentimiento por medio de texto que se utiliza en este proyecto le corresponde a Alexander Espronceda Gómez, quien actualmente está escribiendo una tesis al respecto \citep{chatbot}. Por lo tanto, este proyecto sólamente se enfoca en el mejoramiento de éste, y no en el proceso completo.
 \begin{figure}
 	\centering
 	\captionsetup{type=figure}
@@ -124,19 +124,39 @@ Para determinar que este enfoque iba a funcionar, lo que hicimos fue correr vari
 	\caption{Parámetros antes y después de la mejora}
 \end{figure}
 
+\begin{table}
+\setcounter{table}{0} % por culpa de sciposter
+\captionsetup{type=table} % por culpa de sciposter
+\caption{Resultados de los experimentos antes y después de aplicarse la mejora}
+\label{data}
+\begin{center}
+\scalebox{0.9}{\begin{tabular}{|r|c|l|}
+    \hline
+         \multicolumn{1}{|c|}{}
+         & \multicolumn{1}{|c|}{\rotatebox{90}{\bf Precisión de entrenamiento }}
+         & \multicolumn{1}{|c|}{\rotatebox{90}{\bf Precisión de testeo\phantom{m}}} \\
+         \hline
+         \bf{Antes} & 80.64\% & 55.92\% \\
+         \hline
+         \bf{Después} & 81.75\% & 59.89\% \\
+        \hline
+    \end{tabular}}
+\end{center}
+\end{table}
+
 \section{Conclusiones}
 
 Se ha logrado un aumento en la precisión de reconocimiento de emociones, se espera realizar más modificaciones para mejorar el algoritmo y en un futuro implementarlo para su uso.
 
 \paragraph{Agradecimientos}
 
-{\small Agradecemos a la dra. Elisa Schaeffer por su apoyo en la realización del póster, además de el PROVERICYT al dar la oportunidad de participar en el Verano de Investigación Científica y Tecnológica 2021 y proporcionar una beca.
+{\small El primer autor agradece a PROVERICYT al dar la oportunidad de participar en el Verano de Investigación Científica y Tecnológica 2021 y proporcionar una beca.
 El póster se preparó con \url{https://www.overleaf.com/}.}
-
+\end{multicols}
 
 \bibliography{poster}
 \bibliographystyle{unsrtnat}
 
-\end{multicols}
+
 
 \end{document}
